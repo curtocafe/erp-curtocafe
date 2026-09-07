@@ -14,6 +14,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@invokta/cli": "^0.9.0",
+    "@invokta/core": "^0.9.0",
+    "@invokta/mcp": "^0.9.0",
+    "@invokta/tooling": "^0.9.0",
     "puppeteer-core": "^25.9.0"
   }
 }
