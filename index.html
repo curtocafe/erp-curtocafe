@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curto ERP · Gestão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="login-view" class="login-shell">
+    <section class="login-card">
+      <div class="brand-mark">CURTO<span>.</span></div>
+      <p class="eyebrow">COCKPIT DE GESTÃO</p>
+      <h1>Bem-vindo de volta.</h1>
+      <p class="muted">Acesse o ambiente administrativo do Curto Café.</p>
+      <form id="login-form">
+        <label>E-mail<input id="email" type="email" autocomplete="email" required placeholder="gestor@curtocafe.com" /></label>
+        <label>Senha<input id="password" type="password" autocomplete="current-password" required placeholder="••••••••" /></label>
+        <button type="submit" class="primary full">Entrar no painel <span>→</span></button>
+        <p id="login-error" class="error" role="alert"></p>
+      </form>
+      <small>Acesso exclusivo para usuários com perfil GESTOR.</small>
+    </section>
+  </main>
+
+  <main id="app-view" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand-mark">CURTO<span>.</span></div><p class="side-caption">ERP DE OPERAÇÃO</p>
+      <nav id="nav"><button data-section="overview" class="active">Visão geral</button><button data-section="produtos">Produtos</button><button data-section="categorias">Categorias</button><button data-section="fornecedores">Fornecedores</button><button data-section="unidades">Unidades</button></nav>
+      <button id="logout" class="logout">Sair da conta <span>↗</span></button>
+    </aside>
+    <section class="content"><header><div><p class="eyebrow">AMBIENTE RESTRITO · GESTOR</p><h2 id="page-title">Visão geral</h2></div><div class="user-pill"><span class="avatar">G</span><span id="user-email">Gestor</span></div></header><div id="toast" class="toast"></div><div id="page-content"></div></section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
